@@ -61,6 +61,10 @@ float StompBoxAudioProcessor::getParameter(int index){
   return 0.0f;
 }
 
+const String StompBoxAudioProcessor::getCurrPatchMessage(){
+  return (const char *) patch->currmsg.str().c_str();
+}
+
 void StompBoxAudioProcessor::setParameter(int index, float newValue){
   if(index < sizeof(parameterValues))
     parameterValues[index] = newValue;

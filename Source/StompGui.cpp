@@ -35,6 +35,7 @@ StompGui::StompGui (StompBoxAudioProcessor* ptr)
       slider3 (0),
       label3 (0),
       label4 (0),
+      label5 (0),
       menu (0),
       label1 (0),
       slider1 (0),
@@ -59,6 +60,14 @@ StompGui::StompGui (StompBoxAudioProcessor* ptr)
     slider3->setColour (Slider::trackColourId, Colours::red);
     slider3->setColour (Slider::rotarySliderFillColourId, Colours::black);
     slider3->addListener (this);
+
+    addAndMakeVisible (label5 = new Label ("new label",
+                                           "label text"));
+    label5->setFont (Font (15.0000f, Font::plain));
+    label5->setJustificationType (Justification::centred);
+    label5->setEditable (false, false, false);
+    label5->setColour (TextEditor::textColourId, Colours::black);
+    label5->setColour (TextEditor::backgroundColourId, Colour (0x0));
 
     addAndMakeVisible (label3 = new Label ("new label",
                                            "label text"));
@@ -162,6 +171,7 @@ StompGui::~StompGui()
     deleteAndZero (slider3);
     deleteAndZero (label3);
     deleteAndZero (label4);
+    deleteAndZero (label5);
     deleteAndZero (menu);
     deleteAndZero (label1);
     deleteAndZero (slider1);
@@ -200,6 +210,7 @@ void StompGui::resized()
     slider3->setBounds (285, 61, 90, 90);
     label3->setBounds (285, 146, 90, 24);
     label4->setBounds (415, 146, 90, 24);
+    label5->setBounds (260, 200, 90, 54);
     menu->setBounds (188, 8, 150, 24);
     label1->setBounds (25, 146, 90, 24);
     slider1->setBounds (25, 61, 90, 90);
@@ -303,6 +314,7 @@ void StompGui::timerCallback()
     slider2->setValue(processor->getParameter(1), dontSendNotification);
     slider3->setValue(processor->getParameter(2), dontSendNotification);
     slider4->setValue(processor->getParameter(3), dontSendNotification);
+    label5->setText(processor->getCurrPatchMessage(), dontSendNotification);
 }
 
 //[/MiscUserCode]

@@ -2,12 +2,14 @@
 
 #include "Patches/GainPatch.hpp"
 #include "Patches/TemplatePatch.hpp"
+#include "Patches/Delay1.hpp"
 
 #define REGISTER_PATCH(T, STR) registerPatch(STR, Register<T>::construct)
 
 PatchRegistry::PatchRegistry(){
   REGISTER_PATCH(GainPatch, "Gain");
   REGISTER_PATCH(TemplatePatch, "Template");
+  REGISTER_PATCH(Delay1, "Delay 1");
 }
 
 StringArray PatchRegistry::getNames(){

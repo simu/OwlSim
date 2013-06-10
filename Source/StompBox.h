@@ -1,6 +1,8 @@
 #ifndef __StompBox_h__
 #define __StompBox_h__
 
+#include <sstream>
+
 enum PatchParameterId {
   PARAMETER_A,
   PARAMETER_B,
@@ -30,6 +32,7 @@ public:
   float getParameterValue(PatchParameterId pid);
   int getBlockSize();
   double getSampleRate();
+  std::stringstream currmsg;
 public:
   virtual void processAudio(AudioInputBuffer &input, AudioOutputBuffer &output) = 0;
 };

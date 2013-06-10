@@ -74,6 +74,7 @@ private:
     Slider* slider3;
     Label* label3;
     Label* label4;
+    Label* label5;
     ComboBox* menu;
     Label* label1;
     Slider* slider1;

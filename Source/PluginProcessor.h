@@ -17,6 +17,7 @@ public:
   const String getName() const;
   int getNumParameters();
   float getParameter (int index);
+  const String getCurrPatchMessage();
   void setParameter (int index, float newValue);
   const String getParameterName (int index);
   const String getParameterText (int index);
