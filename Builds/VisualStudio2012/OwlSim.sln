@@ -1,6 +1,6 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
+Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{28A06354-B874-7819-2C19-52357B7AB955}") = "OwlSim", "OwlSim.vcxproj", "{59C21696-E4C4-F552-6573-A87FC0BF0214}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OwlSim", "OwlSim.vcxproj", "{59C21696-E4C4-F552-6573-A87FC0BF0214}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,6 +10,7 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{59C21696-E4C4-F552-6573-A87FC0BF0214}.Debug|Win32.ActiveCfg = Debug|Win32
 		{59C21696-E4C4-F552-6573-A87FC0BF0214}.Debug|Win32.Build.0 = Debug|Win32
+		{59C21696-E4C4-F552-6573-A87FC0BF0214}.Debug|Win32.Deploy.0 = Debug|Win32
 		{59C21696-E4C4-F552-6573-A87FC0BF0214}.Release|Win32.ActiveCfg = Release|Win32
 		{59C21696-E4C4-F552-6573-A87FC0BF0214}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection

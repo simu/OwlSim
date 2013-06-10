@@ -153,6 +153,12 @@ void StompBoxAudioProcessor::processBlock(AudioSampleBuffer& buffer, MidiBuffer&
   // Mutex
   const ScopedLock myScopedLock(mutex);
 
+  // XXX: I'm not sure if this is the right way to simulate a bypass. -SG, 2013-06-10
+  // bypass if flag is set
+  if (this->bypass) {
+    return;
+  }
+
   SampleBuffer buf(buffer);
 
   // let the patch to the audio processing
