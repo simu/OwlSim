@@ -292,6 +292,9 @@
     <Filter Include="Juce Library Code">
       <UniqueIdentifier>{8B4D1BAA-6DB4-CAEC-A0FA-271F354D5C61}</UniqueIdentifier>
     </Filter>
+    <Filter Include="OwlSim\Patches">
+      <UniqueIdentifier>{54e05a13-76f1-4b02-b886-4141094ee2ff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\StompGui.cpp">
@@ -1379,19 +1382,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\Patches\GainPatch.hpp">
-      <Filter>OwlSim\Source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Patches\TemplatePatch.hpp">
-      <Filter>OwlSim\Source</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Source\StompGui.h">
       <Filter>OwlSim\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\PatchRegistry.h">
-      <Filter>OwlSim\Source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\StompBox.h">
       <Filter>OwlSim\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\SampleBuffer.h">
@@ -2623,6 +2617,18 @@
     </ClInclude>
     <ClInclude Include="..\..\JuceLibraryCode\JuceHeader.h">
       <Filter>Juce Library Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\StompBox.h">
+      <Filter>OwlSim\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Patches\GainPatch.hpp">
+      <Filter>OwlSim\Patches</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Patches\TemplatePatch.hpp">
+      <Filter>OwlSim\Patches</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Patches\Delay1.hpp">
+      <Filter>OwlSim\Patches</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
