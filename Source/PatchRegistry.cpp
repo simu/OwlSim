@@ -2,7 +2,7 @@
 
 #include "Patches/GainPatch.hpp"
 #include "Patches/TemplatePatch.hpp"
-#include "Patches/Delay1.hpp"
+#include "Patches/StupidDelayPatch.hpp"
 #include "Patches/SimpleDelayPatch.hpp"
 #include "Patches/ParametricEqPatch.hpp"
 

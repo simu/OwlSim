@@ -1,5 +1,5 @@
-#ifndef __Delay1_hpp__
-#define __Delay1_hpp__
+#ifndef __StupidDelayPatch_hpp__
+#define __StupidDelayPatch_hpp__
 
 #include "StompBox.h"
 
@@ -55,4 +55,4 @@ private:
   float *internal_buf;
 };
 
-#endif // __Delay1_hpp__
+#endif // __StupidDelayPatch_hpp__
