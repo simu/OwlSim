@@ -3,6 +3,8 @@
 #include "Patches/GainPatch.hpp"
 #include "Patches/TemplatePatch.hpp"
 #include "Patches/Delay1.hpp"
+#include "Patches/SimpleDelayPatch.hpp"
+#include "Patches/ParametricEqPatch.hpp"
 
 #define REGISTER_PATCH(T, STR) registerPatch(STR, Register<T>::construct)
 
@@ -10,6 +12,8 @@ PatchRegistry::PatchRegistry(){
   REGISTER_PATCH(GainPatch, "Gain");
   REGISTER_PATCH(TemplatePatch, "Template");
   REGISTER_PATCH(Delay1, "Delay 1");
+  REGISTER_PATCH(SimpleDelayPatch, "Simple Delay");
+  REGISTER_PATCH(ParametricEqPatch, "Parametric EQ");
 }
 
 StringArray PatchRegistry::getNames(){

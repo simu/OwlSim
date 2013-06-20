@@ -6,7 +6,7 @@
 
 StompBoxAudioProcessor* stomp = NULL;
 
-StompBoxAudioProcessor::StompBoxAudioProcessor(){
+StompBoxAudioProcessor::StompBoxAudioProcessor() : bypass(false) {
   stomp = this;
   parameterNames.add("A");
   parameterNames.add("B");
@@ -151,27 +151,20 @@ void StompBoxAudioProcessor::releaseResources(){
   // spare memory, etc.
 }
 
-void StompBoxAudioProcessor::processBlock(AudioSampleBuffer& buffer, MidiBuffer& midiMessages)
-{
-  
+void StompBoxAudioProcessor::processBlock(AudioSampleBuffer& buffer, MidiBuffer& midiMessages){
   // Mutex
   const ScopedLock myScopedLock(mutex);
 
-  // XXX: I'm not sure if this is the right way to simulate a bypass. -SG, 2013-06-10
-  // bypass if flag is set
-  if (this->bypass) {
-    return;
-  }
+  InputSampleBuffer input(buffer);
+  OutputSampleBuffer output(buffer);
 
-  SampleBuffer buf(buffer);
-
-  // let the patch to the audio processing
-  patch->processAudio(buf, buf);
+  // let the patch do the audio processing if not bypassed
+  if(!bypass)
+    patch->processAudio(input, output);
 
   // clear any extra output channels
   for(int i = 1; i < getNumOutputChannels(); ++i)
-    buffer.clear(i, 0, buffer.getNumSamples());
-    
+    buffer.clear(i, 0, buffer.getNumSamples());    
 }
 
 bool StompBoxAudioProcessor::hasEditor() const {
