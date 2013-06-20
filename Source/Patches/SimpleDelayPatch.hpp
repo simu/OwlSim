@@ -15,7 +15,7 @@ public:
   void processAudio(AudioInputBuffer &input, AudioOutputBuffer &output) {        
     const int size = input.getSize();           // samples in block
     float* x = input.getSamples();              // arrays to hold sample data
-    float y[size];
+    std::vector<float> y(size);
         
     delayTime = getParameterValue(PARAMETER_A); // delay time
     feedback  = getParameterValue(PARAMETER_B); // delay feedback
