@@ -3,6 +3,12 @@
 
 #include "StompBox.h"
 
+// make M_PI work with VS2012
+#if defined(_WIN32)
+#define _USE_MATH_DEFINES
+#include <math.h>
+#endif
+
 /**
  * Biquad Parametric EQ filter class
  */
